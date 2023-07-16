@@ -2,7 +2,7 @@ import { useState } from 'react';
 import LikeButton from './components/LikeButton';
 
 function App() {
-  const [message, setMessage] = useState('My 1st Github Action');
+  const [message, setMessage] = useState('My 1st Github Action')
 
   return (
     <div className="py-12 flex justify-center items-center gap-4">
