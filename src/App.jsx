@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import LikeButton from './components/LikeButton'
+import { useState } from 'react';
+import LikeButton from './components/LikeButton';
 
-const App = () => {
-  const [message, setMessage] = useState('My 1st Github Action')
+function App() {
+  const [message, setMessage] = useState('My 1st Github Action');
 
   return (
     <div className="py-12 flex justify-center items-center gap-4">
@@ -10,7 +10,7 @@ const App = () => {
       <input value={message} onChange={(e) => setMessage(e.target.value)} />
       <LikeButton />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
