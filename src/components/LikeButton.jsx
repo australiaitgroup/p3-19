@@ -5,7 +5,7 @@ function LikeButton() {
 
   return (
     <button type="button" className="border px-4 py-2 rounded" onClick={() => setCount(count + 1)}>
-      {`Like ${count}`}
+      {`Like ${count}!`}
     </button>
   );
 }
