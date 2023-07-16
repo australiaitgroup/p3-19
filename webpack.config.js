@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
@@ -28,7 +28,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.js$/, // 当遇到 .js 结尾的文件时
+        test: /\.js(x?)$/, // 当遇到 .js(x?) 结尾的文件时
         exclude: /node_modules/, // 排除掉 node modules 文件夹下的所有文件
         use: {
           loader: 'babel-loader', // 使用 babel loader 进行编译
@@ -52,4 +52,7 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     template: './src/index.html',
   })],
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
 };
